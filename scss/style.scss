@@ -27,6 +27,25 @@ body {
     background-color: $black;
 }
 
+ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    list-style: none;
+
+    a {
+        color: $white;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    li {
+        background-color: $primary-color;
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
 // Traffic Survey Request
 #traffic-survey-request {
     background-color: $dark-background;
