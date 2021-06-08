@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible"
+    content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <title>Traffic Survey</title>
+  <link rel="stylesheet"
+    href="css/style.css">
+</head>
+
+<body>
+
+  <div id="traffic-survey-request">
+    <div id="form-container">
+      <form id="traffic-survey-request-form">
+        <h2>Traffic Survey Request</h2>
+
+        <div id="survey-type-container">
+          <label for="survey-type">Choose a survey type:</label><br>
+          <select name="survey-type"
+            id="survey-type">
+            <option value="left-hand-turn">Left-Hand Turn</option>
+            <option value="left-hand-turn">Right-Hand Turn</option>
+            <option value="left-hand-turn">Parking</option>
+            <option value="left-hand-turn">Other</option>
+          </select><br>
+          <label for="survey-type-other">If Other, please specify:</label><br>
+          <input type="text"
+            id="survey-type-other">
+        </div>
+
+        <div id="location">
+          <label for="intersection">Enter street names at intersection:</label><br>
+          <input id="street-1"
+            type="text"
+            placeholder="Street Name 1">
+          <input id="street-2"
+            type="text"
+            placeholder="Street Name 2"><br>
+
+          <label for="city">Enter city and province/territory:</label><br>
+          <input id="city"
+            type="text"
+            placeholder="City">
+          <select name="province"
+            id="province">
+            <option value="alberta">Alberta</option>
+            <option value="british-columbia">British Columbia</option>
+            <option value="manitoba">Manitoba</option>
+            <option value="newfoundland-labrador">Newfoundland and Labrador</option>
+            <option value="new-brunswick">New Brunswick</option>
+            <option value="northwest-territories">Northwest Territories</option>
+            <option value="nova-scotia">Nova Scotia</option>
+            <option value="nunavut">Nunavut</option>
+            <option value="ontario">Ontario</option>
+            <option value="prince-edward-island">Prince Edward Island</option>
+            <option value="quebec">Quebec</option>
+            <option value="saskatchewan">Saskatchewan</option>
+            <option value="yukon">Yukon</option>
+          </select>
+        </div>
+
+        <div id="start-end-dates">
+          <label for="start-date">Start date:</label><br>
+          <input id="start-date"
+            type="date"><br>
+          <label for="end-date">End date:</label><br>
+          <input id="end-date"
+            type="date">
+        </div>
+
+        <label for="notes">Please enter any notes if applicable:</label>
+        <input id="notes"
+          type="textarea"
+          rows="4"
+          cols="50">
+      </form>
+
+      <button type="submit"
+        form="traffic-survey-form"
+        value="Request Survey">Request Survey</button>
+    </div>
+  </div>
+
+  <div id="traffic-survey-items">
+    <div id="table">
+      <div id="table-headings"
+        class="grid">
+        <div>Start Date</div>
+        <div>End Date</div>
+        <div>Street 1</div>
+        <div>Street 2</div>
+        <div>City</div>
+        <div>Province</div>
+        <div>Survey Type</div>
+        <div>Note</div>
+        <div>Status</div>
+      </div>
+      <div id="data"
+        class="grid"></div>
+    </div>
+  </div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
